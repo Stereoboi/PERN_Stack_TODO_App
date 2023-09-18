@@ -32,7 +32,7 @@ router.init();
 
 const port = app.get('port');
 // eslint-disable-next-line no-console
-const server = app.listen(port, () => {
+const server = app.listen(port, '0.0.0.0', () => {
   return console.log(`Server started on port ${port}`);
 });
 app.use(ErrorHandler);
