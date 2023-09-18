@@ -38,7 +38,6 @@ myPassport.use(
           const error = new CustomError('This user already exists', 400);
           throw error;
         }
-        console.log(process.env.NODEMAILER_OWNER_EMAIL);
 
         const verificationToken = uuidv4();
         const emailOptions = {
