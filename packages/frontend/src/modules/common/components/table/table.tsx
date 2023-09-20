@@ -36,7 +36,10 @@ export const BasicTable = () => {
     query: { data, isLoading: todosLoading }
   } = useGetAllTodos(APP_KEYS.QUERY_KEYS.TODOS + currentURL);
 
-  const { isOnline, isLoading: statusLoading } = useGetStatus();
+  // const { isOnline, isLoading: statusLoading } = useGetStatus();
+  const token = localStorage.getItem('token');
+
+  const isOnline = token;
 
   const {
     mutation: { mutate: deleteMutate, isError: deleteError, isLoading: isDeleteLoading }
